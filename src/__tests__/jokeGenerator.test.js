@@ -1,9 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import Joke from "../joke";
+import { render } from '@testing-library/react'
+import "@testing-library/dom";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+
+test("Joke component receives props and renders text", () => {
+  const { getByTestId } = render(<Joke text="The funniest joke." />);
+
+  expect(getByTestId("joke-text").textContent).toBe("The funniest joke.");
+
 });
+
