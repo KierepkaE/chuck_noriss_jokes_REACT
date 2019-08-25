@@ -1,9 +1,9 @@
 ## Used Technologies
 
-`axios`
-`axios-mock-adapter`
-`react-testing-library`
-`jest`
+- `axios`
+- `axios-mock-adapter`
+- `react-testing-library`
+- `jest`
 
 ## Available Scripts
 
